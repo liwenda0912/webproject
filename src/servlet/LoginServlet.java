@@ -1,15 +1,10 @@
 package servlet;
-
-import Bean.User;
-
-import javax.jms.Session;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Objects;
-
 //import static java.lang.System.out;
 
 @WebServlet(name = "LoginServlet", value = "/LoginServlet")
@@ -37,7 +32,7 @@ public class LoginServlet extends HttpServlet {
                 PrintWriter out = response.getWriter();
                 out.print("<script>alert('123')</script>");
                 out.print("<script>window.location='index.jsp'</script>");
-                HttpSession session = request.getSession();
+//                HttpSession session = request.getSession();
                 // 设置session中的值
                 request.setAttribute("username",UserName);
                 request.setAttribute("key",1);
